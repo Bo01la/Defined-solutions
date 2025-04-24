@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <Link to={"/services"} className="text-5xl bg-amber-200">
-      nav bar
-    </Link>
+    <header>
+      {/* mobile nav */}
+      <nav className=" lg:hidden bg-gradient-to-r from-primary to-secondary text-white fixed w-full">
+        
+      </nav>
+      {/* desktop nav */}
+      <nav className="hidden lg:flex lg:bg-pink-500">desktop</nav>
+    </header>
   );
 }
