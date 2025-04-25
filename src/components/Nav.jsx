@@ -2,11 +2,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const menuToggle = () => {
+  const [isSelected, setIsSelected] = useState("home");
+
+  const menuToggleHandler = () => {
     setIsOpen(!isOpen);
+  };
+
+  const menuSelectHandler = (item) => {
+    setIsSelected(item);
   };
 
   return (
@@ -14,7 +21,7 @@ function Nav() {
       {/* mobile nav */}
       <nav className=" lg:hidden bg-gradient-to-r from-primary to-secondary text-white fixed w-full flex">
         <div
-          onClick={menuToggle}
+          onClick={menuToggleHandler}
           className="rounded-full p-5 hover:bg-[#377099] w-fit h-full absolute flex flex-col items-center content-center cursor-pointer"
         >
           <div className="bg-white/90 h-1 w-6 rounded-full "></div>
@@ -26,7 +33,7 @@ function Nav() {
         </div>
         {isOpen && (
           <div
-            onClick={menuToggle}
+            onClick={menuToggleHandler}
             id="modal"
             className="w-screen h-screen bg-black/30 absolute z-0 "
           >
@@ -44,7 +51,7 @@ function Nav() {
                   </li>
                   <li className="flex gap-6 content-center items-center">
                     <FontAwesomeIcon icon={faChevronRight} />
-                    <Link to="/contact-us">CONTACT US</Link>
+                    <Link to={"/contact-us"}>CONTACT US</Link>
                   </li>
                 </ul>
                 <div>
@@ -60,7 +67,69 @@ function Nav() {
         )}
       </nav>
       {/* desktop nav */}
-      <nav className="hidden lg:block ">desktop</nav>
+      <nav className="hidden lg:block relative">
+        <div className="h-full absolute w-full bg-[url('/assets/images/background_design_1.png')] bg-cover"></div>
+        <div className="h-full absolute w-full bg-[url('/assets/images/background_design_2.png')] bg-cover"></div>
+        <div className="relative h-fit px-24 pt-7 pb-16 flex justify-center items-center">
+          <div className="absolute top-8 left-30">
+            <Link to={"/"} onClick={() => menuSelectHandler("home")}>
+              <img src="/assets/images/logo.png" alt="logo image" />
+            </Link>
+          </div>
+          <div>
+            <ul className="flex justify-between items-center bg-white/30 py-4 px-6 rounded-4xl w-[433px]">
+              <li
+                className="flex justifybetweend items-center gap-2"
+                onClick={() => menuSelectHandler("home")}
+              >
+                {isSelected === "home" ? (
+                  <FontAwesomeIcon icon={faCircle} className="text-[10px]" />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faCircle}
+                    className="text-[10px] opacity-0"
+                  />
+                )}
+                <Link to={"/"} className="hover:bg-black/5">
+                  HOME
+                </Link>
+              </li>
+              <li
+                className="flex justifybetweend items-center gap-2"
+                onClick={() => menuSelectHandler("services")}
+              >
+                {isSelected === "services" ? (
+                  <FontAwesomeIcon icon={faCircle} className="text-[10px]" />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faCircle}
+                    className="text-[10px] opacity-0"
+                  />
+                )}
+                <Link to={"/services"} className="hover:bg-black/5">
+                  SERVICES
+                </Link>
+              </li>
+              <li
+                className="flex justify-between items-center gap-2 "
+                onClick={() => menuSelectHandler("contact")}
+              >
+                {isSelected === "contact" ? (
+                  <FontAwesomeIcon icon={faCircle} className="text-[10px]" />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faCircle}
+                    className="text-[10px] opacity-0"
+                  />
+                )}
+                <Link to={"/contact-us"} className="hover:bg-black/5">
+                  CONTACT US
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
   );
 }
