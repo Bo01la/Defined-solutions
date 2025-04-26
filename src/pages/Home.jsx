@@ -5,7 +5,7 @@ function Home() {
     <>
       <Outlet />
       <div className="text-white text-5xl font-normal pt-14 lg:pt-0">
-        HOME
+        HOME lorem80
         {/*Home content */}
       </div>
       <Outlet />

@@ -68,8 +68,8 @@ function Nav() {
       </nav>
       {/* desktop nav */}
       <nav className="hidden lg:block relative">
-        <div className="h-full absolute w-full bg-[url('/assets/images/background_design_1.png')] bg-cover"></div>
-        <div className="h-full absolute w-full bg-[url('/assets/images/background_design_2.png')] bg-cover"></div>
+        {/* <div className="h-full absolute w-full bg-[url('/assets/images/background_design_1.png')] bg-cover"></div>
+        <div className="h-full absolute w-full bg-[url('/assets/images/background_design_2.png')] bg-cover"></div> */}
         <div className="relative h-fit px-24 pt-7 pb-16 flex justify-center items-center">
           <div className="absolute top-8 left-30">
             <Link to={"/"} onClick={() => menuSelectHandler("home")}>

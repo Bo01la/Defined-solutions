@@ -20,7 +20,7 @@ function Footer() {
         </div>
         <div>
           <p className="text-md font-[500] tracking-widest">
-            Info@definedsolutions.com{" "}
+            Info@definedsolutions.com
           </p>
           <p className="text-md font-[500] tracking-widest">
             4th floor, Hamad Tower, King Fahd Branch Road,Riyadh
