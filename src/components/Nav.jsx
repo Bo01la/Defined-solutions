@@ -19,7 +19,7 @@ function Nav() {
   return (
     <header>
       {/* mobile nav */}
-      <nav className=" lg:hidden bg-gradient-to-r from-primary to-secondary text-white fixed w-full flex">
+      <nav className="lg:hidden bg-gradient-to-r from-primary to-secondary text-white fixed w-full flex">
         <div
           onClick={menuToggleHandler}
           className="rounded-full p-5 hover:bg-[#377099] w-fit h-full absolute flex flex-col items-center content-center cursor-pointer"
@@ -68,9 +68,7 @@ function Nav() {
       </nav>
       {/* desktop nav */}
       <nav className="hidden lg:block relative">
-        {/* <div className="h-full absolute w-full bg-[url('/assets/images/background_design_1.png')] bg-cover"></div>
-        <div className="h-full absolute w-full bg-[url('/assets/images/background_design_2.png')] bg-cover"></div> */}
-        <div className="relative h-fit px-24 pt-7 pb-16 flex justify-center items-center">
+        <div className="relative h-fit px-24 pt-7 flex justify-center items-center">
           <div className="absolute top-8 left-30">
             <Link to={"/"} onClick={() => menuSelectHandler("home")}>
               <img src="/assets/images/logo.png" alt="logo image" />
