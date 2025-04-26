@@ -41,15 +41,15 @@ function Nav() {
               <div className="absolute bg-gradient-to-r from-primary to-secondary inset-0 opacity-80 z-0 rounded-r-2xl"></div>
               <div className="relative z-10 p-5 h-screen text-white flex flex-col justify-between">
                 <ul className="flex flex-col gap-8 mt-3 text-md">
-                  <li className="flex gap-6 content-center items-center">
+                  <li className="flex gap-6 content-center items-center tracking-widest">
                     <FontAwesomeIcon icon={faChevronRight} />
                     <Link to="/">HOME</Link>
                   </li>
-                  <li className="flex gap-6 content-center items-center">
+                  <li className="flex gap-6 content-center items-center tracking-widest">
                     <FontAwesomeIcon icon={faChevronRight} />
                     <Link to="/services">SERVICES</Link>
                   </li>
-                  <li className="flex gap-6 content-center items-center">
+                  <li className="flex gap-6 content-center items-center tracking-widest">
                     <FontAwesomeIcon icon={faChevronRight} />
                     <Link to={"/contact-us"}>CONTACT US</Link>
                   </li>
@@ -90,7 +90,7 @@ function Nav() {
                     className="text-[10px] opacity-0"
                   />
                 )}
-                <Link to={"/"} className="hover:bg-black/5">
+                <Link to={"/"} className="hover:bg-black/5 tracking-widest">
                   HOME
                 </Link>
               </li>
@@ -106,7 +106,10 @@ function Nav() {
                     className="text-[10px] opacity-0"
                   />
                 )}
-                <Link to={"/services"} className="hover:bg-black/5">
+                <Link
+                  to={"/services"}
+                  className="hover:bg-black/5 tracking-widest"
+                >
                   SERVICES
                 </Link>
               </li>
@@ -122,7 +125,10 @@ function Nav() {
                     className="text-[10px] opacity-0"
                   />
                 )}
-                <Link to={"/contact-us"} className="hover:bg-black/5">
+                <Link
+                  to={"/contact-us"}
+                  className="hover:bg-black/5 tracking-widest"
+                >
                   CONTACT US
                 </Link>
               </li>

@@ -5,10 +5,13 @@
   --color-primary: #2075a7;
   --color-secondary: #69c5c5;
   --color-dark: #252525;
+  /* --color-footer-blue: #079FD9; */
+  --color-footer-blue: #3c535c;
+  --color-footer-gray: #99999930;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #252525;
+  background-color: var(--color-dark);
   color: white;
 }
