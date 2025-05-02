@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 export default function RouterLayouts() {
   return (
     <>
-      <main className="bg-[url('/assets/images/background_design_2.png')] lg:bg-[url('/assets/images/background_design_1.png')] bg-cover">
+      <main>
         <Nav />
         <Outlet />
       </main>

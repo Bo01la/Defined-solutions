@@ -19,7 +19,7 @@ function Nav() {
   return (
     <header>
       {/* mobile nav */}
-      <nav className="lg:hidden bg-gradient-to-r from-primary to-secondary text-white fixed w-full flex">
+      <nav className="lg:hidden bg-gradient-to-r from-primary to-secondary text-white fixed w-full flex z-50">
         <div
           onClick={menuToggleHandler}
           className="rounded-full p-5 hover:bg-[#377099] w-fit h-full absolute flex flex-col items-center content-center cursor-pointer"
@@ -67,7 +67,7 @@ function Nav() {
         )}
       </nav>
       {/* desktop nav */}
-      <nav className="hidden lg:block relative">
+      <nav className="hidden lg:block relative z-50">
         <div className="relative h-fit px-24 pt-7 flex justify-center items-center">
           <div className="absolute top-8 left-30">
             <Link to={"/"} onClick={() => menuSelectHandler("home")}>
