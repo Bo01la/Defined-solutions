@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import FadeAnimation from "../components/FadeAnimation";
 import ScrollAnimation from "../components/ScrollAnimation";
-import Cards from "../components/Cards"
+import Cards from "../components/Cards";
 
 function Home() {
   return (
     <>
-      <section className=" bg-[url('/assets/images/background_design_1.png')] lg:bg-cover relative -top-24 z-0 bg-center">
+      <section className=" bg-[url('/assets/images/background_design_1.png')] lg:bg-cover relative -top-22 z-0 bg-center">
         <div className="flex flex-col gap-6 pt-44 lg:px-35 min-h-screen items-center ">
           <h1 className="pb-2 text-center text-4xl lg:text-5xl font-bold tracking-wide flex flex-col gap-2 ">
             WHO WE ARE <span>We Are A Team Of Top-Notch Service </span>
@@ -32,27 +32,166 @@ function Home() {
           <div>{/*section navigator on lg only */}</div>
         </div>
       </section>
-      <section className="flex flex-col gap-6">
+      <div>
+
+      </div>
+      <section id="sec1" className="flex flex-col gap-6">
         <div className="flex flex-col justify-center items-center gap-2 lg:flex-row lg:justify-start lg:gap-4 lg:px-24">
           <img
             src="/assets/images/01.png"
             alt="first section"
-            className="w-27 "
+            className="w-27 lg:w-[157px] lg:h-[94px]"
           />
-          <h2 className="font-black text-2xl tracking-wide">OUR PARTNERS</h2>
+          <h2 className="font-black text-2xl lg:text-4xl tracking-wide">
+            OUR PARTNERS
+          </h2>
         </div>
         <ScrollAnimation />
       </section>
-      <section className="mt-24 lg:mt-16">
-        <div className="flex flex-col justify-center items-center gap-2">
+      <section id="sec2" className="relative mt-24 lg:mt-26 ">
+        <div className="flex flex-col justify-center items-center gap-2 mb-4">
           <img
             src="/assets/images/02.png"
             alt="second section"
-            className="w-27 "
+            className="w-27 lg:w-[157px] lg:h-[94px]"
           />
-          <h2 className="font-black text-2xl tracking-wide">SERVICES</h2>
+          <h2 className="font-black text-2xl lg:text-4xl tracking-wide">
+            SERVICES
+          </h2>
         </div>
         <Cards />
+        <div className="hidden lg:block bg-[url('/assets/images/Ellipse-10.png')] absolute bg-contain bg-no-repeat rotate-180 bg-left  h-[1000px] w-[800px] -top-40 right-0 z-0 "></div>
+      </section>
+      <section
+        id="sec3"
+        className=" mt-24 lg:mt-26 flex flex-col lg:flex-row gap-6"
+      >
+        <div className="flex flex-col justify-center items-center gap-2 lg:flex-row lg:justify-start lg:gap-4 lg:px-24">
+          <img
+            src="/assets/images/03.png"
+            alt="first section"
+            className="w-27 lg:w-[157px] lg:h-[94px]"
+          />
+          <h2 className="font-black text-2xl lg:text-4xl tracking-wide">
+            PROJECTS
+          </h2>
+        </div>
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-34">
+          <div className="flex flex-col items-center justify-center gap-2 lg:gap-4">
+            <img src="/assets/images/total_icon.png" alt="folder icon" />
+            <h5 className="tracking-widest text-2xl">Total</h5>
+            <p className="text-5xl font-black text-primary">190+</p>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2 lg:gap-4">
+            <img src="/assets/images/closed_icon.png" alt="folder icon" />
+            <h5 className="tracking-widest text-2xl">Closed</h5>
+            <p className="text-5xl font-black text-primary">120+</p>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2 lg:gap-4">
+            <img src="/assets/images/running_icon.png" alt="folder icon" />
+            <h5 className="tracking-widest text-2xl">Running</h5>
+            <p className="text-5xl font-black text-primary">70+</p>
+          </div>
+        </div>
+      </section>
+      <section id="sec4" className="mt-24 lg:mt-26 relative">
+        <div className="flex flex-col justify-center items-center gap-2 mb-4">
+          <img
+            src="/assets/images/04.png"
+            alt="second section"
+            className="w-27 lg:w-[157px] lg:h-[94px]"
+          />
+          <h2 className="font-black text-2xl lg:text-4xl tracking-wide">
+            CUSTOMERS
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-8 lg:mt-12">
+          <div className="flex flex-col gap-2 lg:gap-8 items-center ">
+            <h4 className="text-2xl font-semibold tracking-wider">
+              Ministries Sector
+            </h4>
+            <div className="flex flex-col gap-4">
+              <p className="tracking-widest text-center text-[15px]">MEWA</p>
+              <p className="tracking-widest text-center text-[15px]">MOC</p>
+              <p className="tracking-widest text-center text-[15px]">MOH</p>
+              <p className="tracking-widest text-center text-[15px]">MISA</p>
+              <p className="tracking-widest text-center text-[15px]">MOD</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 lg:gap-8 items-center ">
+            <h4 className="text-2xl font-semibold tracking-wider">
+              Government Sector
+            </h4>
+            <div className="flex flex-col gap-4">
+              <p className="tracking-widest text-center text-[15px]">SPL</p>
+              <p className="tracking-widest text-center text-[15px]">SDAIA</p>
+              <p className="tracking-widest text-center text-[15px]">ZATCA</p>
+              <p className="tracking-widest text-center text-[15px]">MIC</p>
+              <p className="tracking-widest text-center text-[15px]">ELM</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 lg:gap-8 items-center ">
+            <h4 className="text-2xl font-semibold tracking-wider">
+              Financial & banking sector
+            </h4>
+            <div className="flex flex-col gap-4">
+              <p className="tracking-widest text-center text-[15px]">ARB</p>
+              <p className="tracking-widest text-center text-[15px]">QNB</p>
+              <p className="tracking-widest text-center text-[15px]">SAIB</p>
+              <p className="tracking-widest text-center text-[15px]">AJIL</p>
+              <p className="tracking-widest text-center text-[15px]">
+                Banque Misr
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 lg:gap-8 items-center ">
+            <h4 className="text-2xl font-semibold tracking-wider">
+              Healthcare sector
+            </h4>
+            <div className="flex flex-col gap-4">
+              <p className="tracking-widest text-center text-[15px]">KFCHRC</p>
+              <p className="tracking-widest text-center text-[15px]">KFMC</p>
+              <p className="tracking-widest text-center text-[15px]">
+                Fakeeh Hospital
+              </p>
+              <p className="tracking-widest text-center text-[15px]">KAUH</p>
+              <p className="tracking-widest text-center text-[15px]">SPRC</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 lg:gap-8 items-center ">
+            <h4 className="text-2xl font-semibold tracking-wider">
+              Service provider sector
+            </h4>
+            <div className="flex flex-col gap-4">
+              <p className="tracking-widest text-center text-[15px]">Mobily</p>
+              <p className="tracking-widest text-center text-[15px]">STC</p>
+              <p className="tracking-widest text-center text-[15px]">ZAIN</p>
+              <p className="tracking-widest text-center text-[15px]">
+                Salam ITC
+              </p>
+              <p className="tracking-widest text-center text-[15px]">SPRC</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 lg:gap-8 items-center ">
+            <h4 className="text-2xl font-semibold tracking-wider">
+              Commercial sector
+            </h4>
+            <div className="flex flex-col gap-4">
+              <p className="tracking-widest text-center text-[15px]">
+                Sanibel investment
+              </p>
+              <p className="tracking-widest text-center text-[15px]">
+                Roua Al Madinah
+              </p>
+              <p className="tracking-widest text-center text-[15px]">
+                Industrial Services Company
+              </p>
+              <p className="tracking-widest text-center text-[15px]">NUPCO</p>
+              <p className="tracking-widest text-center text-[15px]">NEOM</p>
+            </div>
+          </div>
+        </div>
+        <div className="hidden lg:block bg-[url('/assets/images/Ellipse-10.png')] opacity-75 absolute bg-contain bg-no-repeat rotate-180 bg-left  h-[1000px] w-[800px] -top-40 right-0 z-0 "></div>
       </section>
     </>
   );

@@ -19,7 +19,7 @@ function Nav() {
   return (
     <header>
       {/* mobile nav */}
-      <nav className="lg:hidden bg-gradient-to-r from-primary to-secondary text-white fixed w-full flex z-50">
+      <nav className="lg:hidden bg-gradient-to-r from-primary to-secondary text-white fixed w-full flex z-100">
         <div
           onClick={menuToggleHandler}
           className="rounded-full p-5 hover:bg-[#377099] w-fit h-full absolute flex flex-col items-center content-center cursor-pointer"
