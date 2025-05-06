@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
 import FadeAnimation from "../components/FadeAnimation";
 import ScrollAnimation from "../components/ScrollAnimation";
 import Cards from "../components/Cards";
@@ -29,12 +31,96 @@ function Home() {
               </Link>
             </button>
           </div>
-          <div>{/*section navigator on lg only */}</div>
+        </div>
+        <div className="hidden lg:block my-20 px-26">
+          <div className="relative">
+            <div className="grid grid-cols-4 relative z-10">
+              <div className="flex flex-col gap-8 justify-center items-center">
+                <ScrollLink
+                  to="sec1"
+                  smooth={true}
+                  duration={1000}
+                  className="tracking-wider cursor-pointer"
+                >
+                  01 OUR PARTNERS
+                </ScrollLink>
+                <ScrollLink
+                  to="sec1"
+                  smooth={true}
+                  duration={1000}
+                  className="cursor-pointer"
+                >
+                  <div className="size-5 bg-white rounded-full flex justify-center items-center">
+                    <div className="size-3 bg-primary rounded-full"></div>
+                  </div>
+                </ScrollLink>
+              </div>
+              <div className="flex flex-col gap-8 justify-center items-center">
+                <ScrollLink
+                  to="sec2"
+                  smooth={true}
+                  duration={1000}
+                  className="tracking-wider cursor-pointer"
+                >
+                  02 SERVICES
+                </ScrollLink>
+                <ScrollLink
+                  to="sec2"
+                  smooth={true}
+                  duration={1000}
+                  className="cursor-pointer"
+                >
+                  <div className="size-5 bg-white rounded-full flex justify-center items-center">
+                    <div className="size-3 bg-primary rounded-full"></div>
+                  </div>
+                </ScrollLink>
+              </div>
+              <div className="flex flex-col gap-8 justify-center items-center">
+                <ScrollLink
+                  to="sec3"
+                  smooth={true}
+                  duration={1000}
+                  className="tracking-wider cursor-pointer"
+                >
+                  03 PROJECTS
+                </ScrollLink>
+                <ScrollLink
+                  to="sec3"
+                  smooth={true}
+                  duration={1000}
+                  className="cursor-pointer"
+                >
+                  <div className="size-5 bg-white rounded-full flex justify-center items-center">
+                    <div className="size-3 bg-primary rounded-full"></div>
+                  </div>
+                </ScrollLink>
+              </div>
+              <div className="flex flex-col gap-8 justify-center items-center">
+                <ScrollLink
+                  to="sec4"
+                  smooth={true}
+                  duration={1000}
+                  className="tracking-wider cursor-pointer"
+                >
+                  04 CUSOMERS
+                </ScrollLink>
+                <ScrollLink
+                  to="sec4"
+                  smooth={true}
+                  duration={1000}
+                  className="cursor-pointer"
+                >
+                  <div className="size-5 bg-white rounded-full flex justify-center items-center">
+                    <div className="size-3 bg-primary rounded-full"></div>
+                  </div>
+                </ScrollLink>
+              </div>
+            </div>
+            <div className="absolute top-16 left-35 h-[2px] w-3/4 bg-[#9c9e9d] z-0 "></div>
+          </div>
         </div>
       </section>
-      <div>
 
-      </div>
       <section id="sec1" className="flex flex-col gap-6">
         <div className="flex flex-col justify-center items-center gap-2 lg:flex-row lg:justify-start lg:gap-4 lg:px-24">
           <img

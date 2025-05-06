@@ -39,7 +39,7 @@ const services = [
 
 function Cards() {
   return (
-    <div className="flex flex-col gap-6 relative z-50">
+    <div className="flex flex-col gap-6 relative z-50 ">
       {services.map((content) => (
         <div className="mx-5 flex flex-col lg:flex-row justify-center lg:h-[86px] lg:justify-normal items-center gap-3 p-4 lg:px-8 lg:py-2 text-primary bg-white rounded-[48px] lg:rounded-full ">
           <h3 className="lg:min-w-[360px] text-center lg:text-start text-2xl font-black">
