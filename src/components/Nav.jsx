@@ -1,16 +1,29 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSelected, setIsSelected] = useState("home");
+  const [isSelected, setIsSelected] = useState("");
 
   const menuToggleHandler = () => {
     setIsOpen(!isOpen);
   };
+
+  const location = useLocation();
+  useEffect(
+    () =>
+      location.pathname === "/"
+        ? setIsSelected("home")
+        : location.pathname === "/services"
+        ? setIsSelected("services")
+        : location.pathname === "/contact-us"
+        ? setIsSelected("contact")
+        : setIsSelected(""),
+    [location.pathname]
+  );
 
   const menuSelectHandler = (item) => {
     setIsSelected(item);
