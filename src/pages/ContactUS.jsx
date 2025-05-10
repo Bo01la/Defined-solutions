@@ -1,5 +1,12 @@
 import Inputs from "../components/Inputs";
-import { faUser, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faEnvelope,
+  faPhone,
+  faArrowRight,
+  faCircleArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 function ContactUS() {
@@ -112,9 +119,13 @@ function ContactUS() {
               </div>
               <button
                 onClick={handleSubmit}
-                className=" min-h-12 bg-gradient-to-b from-primary to-secondary text-lg font-bold rounded-xl "
+                className=" relative min-h-12 bg-gradient-to-b from-primary to-secondary text-lg font-bold tracking-widest rounded-xl cursor-pointer "
               >
                 Send
+                <FontAwesomeIcon icon={faCircleArrowRight} className="absolute top-3 left-8 -rotate-45 text-2xl"/>
+
+                {/* <div className="absolute top-2 left-6 flex justify-center items-center size-8 bg-amber-50 rounded-full">
+                </div> */}
               </button>
             </form>
           </div>
