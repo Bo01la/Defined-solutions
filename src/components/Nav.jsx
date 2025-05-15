@@ -60,7 +60,7 @@ function Nav() {
                   </li>
                   <li className="flex gap-6 content-center items-center tracking-widest">
                     <FontAwesomeIcon icon={faChevronRight} />
-                    <Link to="/services">SERVICES</Link>
+                    <Link to="/services?service=1">SERVICES</Link>
                   </li>
                   <li className="flex gap-6 content-center items-center tracking-widest">
                     <FontAwesomeIcon icon={faChevronRight} />
@@ -118,7 +118,7 @@ function Nav() {
                   />
                 )}
                 <Link
-                  to={"/services"}
+                  to={"/services?service=1"}
                   className="hover:bg-black/5 tracking-widest"
                 >
                   SERVICES
