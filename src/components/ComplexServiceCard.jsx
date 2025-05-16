@@ -4,10 +4,10 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 function ComplexServiceCard({ title, body, onToggle }) {
   return (
     <div className="mx-5 flex flex-col lg:flex-row justify-center lg:h-[86px] lg:justify-normal items-center gap-3 p-4 lg:px-8 lg:py-2 text-primary bg-white rounded-[48px] lg:rounded-full ">
-      <h3 className="lg:min-w-[360px] text-center lg:text-start text-2xl font-black">
+      <h3 className="lg:min-w-[360px] lg:max-w-[100px] text-center lg:text-start text-2xl font-black">
         {title}
       </h3>
-      <p className="text-center lg:text-start lg:max-w-[800px] lg:text-[15px]">
+      <p className="text-center lg:text-start lg:max-w-[600px] lg:text-[15px]">
         {body}
       </p>
       <button
