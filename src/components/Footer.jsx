@@ -11,7 +11,10 @@ function Footer() {
           <Link to={"/"} className="text-lg w-fit tracking-wide ">
             HOME
           </Link>
-          <Link to={"/services"} className="text-lg w-fit tracking-wide ">
+          <Link
+            to={"/services?service=1"}
+            className="text-lg w-fit tracking-wide "
+          >
             SERVICES
           </Link>
           <Link to={"/contact-us"} className=" text-lg w-fit tracking-wide ">

@@ -18,7 +18,7 @@ function Home() {
 
           <div className="w-full flex items-center justify-center gap-5 lg:gap-15 lg:mt-6">
             <button className="w-[164px] h-9 flex justify-center items-center rounded-2xl bg-gradient-to-r from-primary to-secondary text-xl font-semibold">
-              <Link to={"/services"} className="w-full">
+              <Link to={"/services?service=1"} className="w-full">
                 SERVICES
               </Link>
             </button>
