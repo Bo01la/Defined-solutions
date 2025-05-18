@@ -2,11 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import FadeInWrapper from "./FadeInWrapper";
 
-function ComplexServiceCard({ title, body, onToggle, isOpen }) {
+function ComplexServiceCard({ title, body, onToggle, isOpen, lastService }) {
   return (
     <FadeInWrapper>
       <div className="mx-5 flex flex-col lg:flex-row justify-center lg:h-[86px] lg:justify-normal items-center gap-3 p-4 lg:px-8 lg:py-2 text-primary bg-white rounded-[48px] lg:rounded-full ">
-        <h3 className="lg:max-w-[360px]  text-center lg:text-start text-2xl font-black">
+        <h3 className={`lg:max-w-[360px]  text-center lg:text-start ${body || lastService ? "text-2xl font-black" : null}`}>
           {title}
         </h3>
         <p className="text-center lg:text-start lg:max-w-[700px] lg:text-[15px]">

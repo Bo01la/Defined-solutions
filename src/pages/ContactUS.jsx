@@ -54,7 +54,9 @@ function ContactUS() {
           <div className="flex flex-col gap-6 lg:pt-10">
             {/* controls both form and title*/}
             <div className="px-6 text-center flex flex-col gap-1.5">
-              <h1 className="font-bold text-5xl">CONTACT US</h1>
+              <h1 className="text-2xl font-black lg:text-5xl lg:font-bold">
+                CONTACT US
+              </h1>
               <p className="text-sm tracking-wider">
                 We are always here to help out whatever way you can
               </p>
@@ -122,8 +124,10 @@ function ContactUS() {
                 className=" relative min-h-12 bg-gradient-to-b from-primary to-secondary text-lg font-bold tracking-widest rounded-xl cursor-pointer "
               >
                 Send
-                <FontAwesomeIcon icon={faCircleArrowRight} className="absolute top-3 left-8 -rotate-45 text-2xl"/>
-
+                <FontAwesomeIcon
+                  icon={faCircleArrowRight}
+                  className="absolute top-3 left-8 -rotate-45 text-2xl"
+                />
                 {/* <div className="absolute top-2 left-6 flex justify-center items-center size-8 bg-amber-50 rounded-full">
                 </div> */}
               </button>

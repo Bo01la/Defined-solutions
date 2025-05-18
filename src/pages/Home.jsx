@@ -51,7 +51,7 @@ function Home() {
                   className="cursor-pointer"
                 >
                   <div className="size-5 bg-white rounded-full flex justify-center items-center">
-                    <div className="size-3 bg-primary rounded-full"></div>
+                    <div className="size-3.5 bg-primary rounded-full"></div>
                   </div>
                 </ScrollLink>
               </div>
