@@ -66,6 +66,7 @@ function Services() {
           {service === "1" && (
             <div className="flex flex-col gap-6 relative z-50 ">
               <ComplexServiceCard
+                isOpen={subService}
                 onToggle={subServicehandler}
                 title={"Datacenter Modernization"}
                 body={
@@ -111,6 +112,7 @@ function Services() {
           {service === "2" && (
             <div className="flex flex-col gap-6 relative z-50 ">
               <ComplexServiceCard
+                isOpen={subService}
                 onToggle={subServicehandler}
                 title={"Migration Services"}
                 body={
@@ -159,6 +161,7 @@ function Services() {
           {service === "3" && (
             <div className="flex flex-col gap-6 relative z-50 ">
               <ComplexServiceCard
+                isOpen={subService}
                 onToggle={subServicehandler}
                 title={"Network & Security"}
                 body={
@@ -207,6 +210,7 @@ function Services() {
           {service === "4" && (
             <div className="flex flex-col gap-6 relative z-50 ">
               <ComplexServiceCard
+                isOpen={subService}
                 onToggle={subServicehandler}
                 title={"Database Management"}
                 body={
@@ -249,6 +253,7 @@ function Services() {
           {service === "5" && (
             <div className="flex flex-col gap-6 relative z-50 ">
               <ComplexServiceCard
+                isOpen={subService}
                 onToggle={subServicehandler}
                 title={"Private Multi-Cloud Services"}
                 body={
@@ -285,6 +290,7 @@ function Services() {
           {service === "6" && (
             <div className="flex flex-col gap-6 relative z-50 ">
               <ComplexServiceCard
+                isOpen={subService}
                 onToggle={subServicehandler}
                 title={"Cloud services"}
                 body={
@@ -293,92 +299,93 @@ function Services() {
               />
               {subService && (
                 <div className="flex flex-col gap-3.5">
-                  <div className="flex flex-col gap-2">
-                    <ComplexServiceCard
-                      onToggle={() => nestedServiceHandler(1)}
-                      title={"1. Cloud Strategy & Implementation:"}
-                    />
-                    {nestedService === 1 && (
-                      <>
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Assessment & Planning:"}
-                          subBody={
-                            "This service helps businesses evaluate their current IT infrastructure and applications to determine the best cloud adoption strategy (public, private, hybrid). It involves analyzing workloads, security needs, budget constraints, and compliance requirements to create a customized cloud roadmap."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Architecture Design:"}
-                          subBody={
-                            "Experts design a secure and scalable cloud architecture that aligns with your business goals. This includes selecting the appropriate cloud platform, designing infrastructure components, and integrating with on-premises systems."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Implementation:"}
-                          subBody={
-                            "This service involves provisioning cloud resources, configuring services, and deploying applications to the chosen cloud platform. Experts ensure a smooth and secure transition to the cloud environment."
-                          }
-                        />
-                      </>
-                    )}
-                    <ComplexServiceCard
-                      onToggle={() => nestedServiceHandler(2)}
-                      title={"2. Cloud Management:"}
-                    />
-                    {nestedService === 2 && (
-                      <>
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Cost Optimization:"}
-                          subBody={
-                            "Help you optimize your cloud spending by analyzing usage patterns, identifying cost-saving opportunities (reserved instances, discounts), and recommending resource allocation strategies."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Security Management:"}
-                          subBody={
-                            "Maintaining robust security in the cloud is crucial. We offer ongoing security monitoring, vulnerability assessments, and threat detection services to safeguard your cloud environment."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Performance Management:"}
-                          subBody={
-                            "Monitoring and optimizing cloud performance is essential for smooth operations. Utilize tools and expertise to monitor application performance, identify bottlenecks, and troubleshoot issues."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Patch Management:"}
-                          subBody={
-                            "Keeping software in your cloud environment up-to-date with security patches is crucial. Our team can automate patch management processes to ensure your systems stay protected."
-                          }
-                        />
-                      </>
-                    )}
-                    <ComplexServiceCard
-                      onToggle={() => nestedServiceHandler(3)}
-                      title={"3. Cloud Migration:"}
-                    />
-                    {nestedService === 3 && (
-                      <>
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Migration Planning & Strategy:"}
-                          subBody={
-                            "Planning a successful cloud migration requires careful consideration. Our team help define migration goals, timelines, and dependencies, while selecting the most appropriate migration approach (lift-and-shift, refactoring, etc.) for each workload."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Cloud Migration Execution:"}
-                          subBody={
-                            "Executing the migration plan involves moving data, applications, and infrastructure to the cloud platform. Our team handle the technical complexities of migration, ensuring minimal disruption to ongoing operations."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Post-Migration Support:"}
-                          subBody={
-                            "Even after migrating to the cloud, ongoing support is crucial. Defined Solutions offer assistance with post-migration optimization, performance monitoring, and security management to ensure a smooth transition."
-                          }
-                        />
-                      </>
-                    )}
-                  </div>
+                  <ComplexServiceCard
+                    isOpen={nestedService === 1}
+                    onToggle={() => nestedServiceHandler(1)}
+                    title={"1. Cloud Strategy & Implementation:"}
+                  />
+                  {nestedService === 1 && (
+                    <div className="flex flex-col gap-2">
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Assessment & Planning:"}
+                        subBody={
+                          "This service helps businesses evaluate their current IT infrastructure and applications to determine the best cloud adoption strategy (public, private, hybrid). It involves analyzing workloads, security needs, budget constraints, and compliance requirements to create a customized cloud roadmap."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Architecture Design:"}
+                        subBody={
+                          "Experts design a secure and scalable cloud architecture that aligns with your business goals. This includes selecting the appropriate cloud platform, designing infrastructure components, and integrating with on-premises systems."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Implementation:"}
+                        subBody={
+                          "This service involves provisioning cloud resources, configuring services, and deploying applications to the chosen cloud platform. Experts ensure a smooth and secure transition to the cloud environment."
+                        }
+                      />
+                    </div>
+                  )}
+                  <ComplexServiceCard
+                    isOpen={nestedService === 2}
+                    onToggle={() => nestedServiceHandler(2)}
+                    title={"2. Cloud Management:"}
+                  />
+                  {nestedService === 2 && (
+                    <div className="flex flex-col gap-2">
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Cost Optimization:"}
+                        subBody={
+                          "Help you optimize your cloud spending by analyzing usage patterns, identifying cost-saving opportunities (reserved instances, discounts), and recommending resource allocation strategies."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Security Management:"}
+                        subBody={
+                          "Maintaining robust security in the cloud is crucial. We offer ongoing security monitoring, vulnerability assessments, and threat detection services to safeguard your cloud environment."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Performance Management:"}
+                        subBody={
+                          "Monitoring and optimizing cloud performance is essential for smooth operations. Utilize tools and expertise to monitor application performance, identify bottlenecks, and troubleshoot issues."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Patch Management:"}
+                        subBody={
+                          "Keeping software in your cloud environment up-to-date with security patches is crucial. Our team can automate patch management processes to ensure your systems stay protected."
+                        }
+                      />
+                    </div>
+                  )}
+                  <ComplexServiceCard
+                    isOpen={nestedService === 3}
+                    onToggle={() => nestedServiceHandler(3)}
+                    title={"3. Cloud Migration:"}
+                  />
+                  {nestedService === 3 && (
+                    <div className="flex flex-col gap-2">
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Migration Planning & Strategy:"}
+                        subBody={
+                          "Planning a successful cloud migration requires careful consideration. Our team help define migration goals, timelines, and dependencies, while selecting the most appropriate migration approach (lift-and-shift, refactoring, etc.) for each workload."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Cloud Migration Execution:"}
+                        subBody={
+                          "Executing the migration plan involves moving data, applications, and infrastructure to the cloud platform. Our team handle the technical complexities of migration, ensuring minimal disruption to ongoing operations."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Post-Migration Support:"}
+                        subBody={
+                          "Even after migrating to the cloud, ongoing support is crucial. Defined Solutions offer assistance with post-migration optimization, performance monitoring, and security management to ensure a smooth transition."
+                        }
+                      />
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -387,6 +394,7 @@ function Services() {
           {service === "7" && (
             <div className="flex flex-col gap-6 relative z-50 ">
               <ComplexServiceCard
+                isOpen={subService}
                 onToggle={subServicehandler}
                 title={"Business Continuity and Disaster Recovery (BCDR)"}
                 body={
@@ -395,141 +403,144 @@ function Services() {
               />
               {subService && (
                 <div className="flex flex-col gap-3.5">
-                  <div className="flex flex-col gap-2">
-                    <ComplexServiceCard
-                      onToggle={() => nestedServiceHandler(1)}
-                      title={"1. Backup and Data Protection Services "}
-                    />
-                    {nestedService === 1 && (
-                      <>
-                        <SimpleServiceCard
-                          subTitle={"- Data Backup solutions:"}
-                          subBody={
-                            "We design and implement a secure data backup strategy that utilizes industry-leading backup technologies. This may include local backups, cloud backups, and a combination of both for optimal redundancy."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Data Archiving:"}
-                          subBody={
-                            "We establish a data archiving strategy to ensure long-term data retention according to your compliance requirements."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Data Recovery Services:"}
-                          subBody={
-                            "We develop and test data recovery procedures to ensure you can efficiently restore critical data in case of a disaster."
-                          }
-                        />
-                      </>
-                    )}
-                    <ComplexServiceCard
-                      onToggle={() => nestedServiceHandler(2)}
-                      title={"2. Replication Services  "}
-                    />
-                    {nestedService === 2 && (
-                      <>
-                        <SimpleServiceCard
-                          subTitle={"- Disaster Recovery Site Replication:"}
-                          subBody={
-                            "We configure real-time or periodic data replication to a secondary disaster recovery (DR) site to minimize data loss in case of an outage at the primary site."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Application Replication:"}
-                          subBody={
-                            "We replicate critical applications to the DR site to ensure their continued availability during a disaster."
-                          }
-                        />
-                      </>
-                    )}
-                    <ComplexServiceCard
-                      onToggle={() => nestedServiceHandler(3)}
-                      title={"3. Building Disaster Recovery Services"}
-                    />
-                    {nestedService === 3 && (
-                      <>
-                        <SimpleServiceCard
-                          subTitle={"- DR Site Assessment and Selection:"}
-                          subBody={
-                            "We help you assess your DR site needs and assist in selecting the most suitable DR location based on factors like cost, security, and recovery time objectives (RTOs)."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={
-                            "- DR Infrastructure Design and Implementation:"
-                          }
-                          subBody={
-                            "We design, build, and configure your DR infrastructure, ensuring it can seamlessly support your critical business functions in case of a primary site outage."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- DR Orchestration and Automation:"}
-                          subBody={
-                            "We implement DR orchestration and automation tools to streamline the disaster recovery process, minimizing manual intervention and human error."
-                          }
-                        />
-                      </>
-                    )}
-                    <ComplexServiceCard
-                      onToggle={() => nestedServiceHandler(4)}
-                      title={"4. Building Business Continuity Planning"}
-                    />
-                    {nestedService === 4 && (
-                      <>
-                        <SimpleServiceCard
-                          subTitle={"- Business Impact Analysis (BIA):"}
-                          subBody={
-                            "We conduct a BIA to identify your critical business functions, their dependencies on IT systems, and the potential impact of disruptions."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- Risk Assessment:"}
-                          subBody={
-                            "We assess potential threats and vulnerabilities that could disrupt your operations and develop mitigation strategies."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={
-                            "- Business Continuity Plan (BCP) Development:"
-                          }
-                          subBody={
-                            "We collaborate with your team to create a comprehensive BCP that outlines recovery procedures, roles and responsibilities, and communication protocols in the event of a disaster."
-                          }
-                        />
-                      </>
-                    )}
-                    <ComplexServiceCard
-                      onToggle={() => nestedServiceHandler(5)}
-                      title={"5. DR Drills and Runbooks"}
-                    />
-                    {nestedService === 5 && (
-                      <>
-                        <SimpleServiceCard
-                          subTitle={"- DR Testing and Validation:"}
-                          subBody={
-                            "We conduct regular DR drills to test your BCDR plan, identify any gaps, and ensure your team is prepared to execute recovery procedures effectively."
-                          }
-                        />
-                        <SimpleServiceCard
-                          subTitle={"- DR Runbook Development:"}
-                          subBody={
-                            "We develop and maintain DR runbooks that document detailed recovery procedures for various disaster scenarios, ensuring a smooth and coordinated response during an outage."
-                          }
-                        />
-                      </>
-                    )}
-                  </div>
+                  <ComplexServiceCard
+                    isOpen={nestedService === 1}
+                    onToggle={() => nestedServiceHandler(1)}
+                    title={"1. Backup and Data Protection Services "}
+                  />
+                  {nestedService === 1 && (
+                    <div className="flex flex-col gap-2">
+                      <SimpleServiceCard
+                        subTitle={"- Data Backup solutions:"}
+                        subBody={
+                          "We design and implement a secure data backup strategy that utilizes industry-leading backup technologies. This may include local backups, cloud backups, and a combination of both for optimal redundancy."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Data Archiving:"}
+                        subBody={
+                          "We establish a data archiving strategy to ensure long-term data retention according to your compliance requirements."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Data Recovery Services:"}
+                        subBody={
+                          "We develop and test data recovery procedures to ensure you can efficiently restore critical data in case of a disaster."
+                        }
+                      />
+                    </div>
+                  )}
+                  <ComplexServiceCard
+                    isOpen={nestedService === 2}
+                    onToggle={() => nestedServiceHandler(2)}
+                    title={"2. Replication Services  "}
+                  />
+                  {nestedService === 2 && (
+                    <div className="flex flex-col gap-2">
+                      <SimpleServiceCard
+                        subTitle={"- Disaster Recovery Site Replication:"}
+                        subBody={
+                          "We configure real-time or periodic data replication to a secondary disaster recovery (DR) site to minimize data loss in case of an outage at the primary site."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Application Replication:"}
+                        subBody={
+                          "We replicate critical applications to the DR site to ensure their continued availability during a disaster."
+                        }
+                      />
+                    </div>
+                  )}
+                  <ComplexServiceCard
+                    isOpen={nestedService === 3}
+                    onToggle={() => nestedServiceHandler(3)}
+                    title={"3. Building Disaster Recovery Services"}
+                  />
+                  {nestedService === 3 && (
+                    <div className="flex flex-col gap-2">
+                      <SimpleServiceCard
+                        subTitle={"- DR Site Assessment and Selection:"}
+                        subBody={
+                          "We help you assess your DR site needs and assist in selecting the most suitable DR location based on factors like cost, security, and recovery time objectives (RTOs)."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={
+                          "- DR Infrastructure Design and Implementation:"
+                        }
+                        subBody={
+                          "We design, build, and configure your DR infrastructure, ensuring it can seamlessly support your critical business functions in case of a primary site outage."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- DR Orchestration and Automation:"}
+                        subBody={
+                          "We implement DR orchestration and automation tools to streamline the disaster recovery process, minimizing manual intervention and human error."
+                        }
+                      />
+                    </div>
+                  )}
+                  <ComplexServiceCard
+                    isOpen={nestedService === 4}
+                    onToggle={() => nestedServiceHandler(4)}
+                    title={"4. Building Business Continuity Planning"}
+                  />
+                  {nestedService === 4 && (
+                    <div className="flex flex-col gap-2">
+                      <SimpleServiceCard
+                        subTitle={"- Business Impact Analysis (BIA):"}
+                        subBody={
+                          "We conduct a BIA to identify your critical business functions, their dependencies on IT systems, and the potential impact of disruptions."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- Risk Assessment:"}
+                        subBody={
+                          "We assess potential threats and vulnerabilities that could disrupt your operations and develop mitigation strategies."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={
+                          "- Business Continuity Plan (BCP) Development:"
+                        }
+                        subBody={
+                          "We collaborate with your team to create a comprehensive BCP that outlines recovery procedures, roles and responsibilities, and communication protocols in the event of a disaster."
+                        }
+                      />
+                    </div>
+                  )}
+                  <ComplexServiceCard
+                    isOpen={nestedService === 5}
+                    onToggle={() => nestedServiceHandler(5)}
+                    title={"5. DR Drills and Runbooks"}
+                  />
+                  {nestedService === 5 && (
+                    <div className="flex flex-col gap-2">
+                      <SimpleServiceCard
+                        subTitle={"- DR Testing and Validation:"}
+                        subBody={
+                          "We conduct regular DR drills to test your BCDR plan, identify any gaps, and ensure your team is prepared to execute recovery procedures effectively."
+                        }
+                      />
+                      <SimpleServiceCard
+                        subTitle={"- DR Runbook Development:"}
+                        subBody={
+                          "We develop and maintain DR runbooks that document detailed recovery procedures for various disaster scenarios, ensuring a smooth and coordinated response during an outage."
+                        }
+                      />
+                    </div>
+                  )}
                 </div>
               )}
-              {}
             </div>
           )}
+          {/*Managed Services 8*/}
           {service === "8" && (
             <div className="flex flex-col gap-6 relative z-50 ">
               <ComplexServiceCard
+                isOpen={nestedService === 1}
                 onToggle={() => nestedServiceHandler(1)}
-                title={"Managed Services"}
-                body={"Managed services value"}
+                title={"Managed services value"}
               />
               {nestedService === 1 && (
                 <>
@@ -562,9 +573,9 @@ function Services() {
                 </>
               )}
               <ComplexServiceCard
+                isOpen={nestedService === 2}
                 onToggle={() => nestedServiceHandler(2)}
-                title={"Managed Services"}
-                body={"Managed Services Models"}
+                title={"Managed Services Models"}
               />
               {nestedService === 2 && (
                 <>
