@@ -38,26 +38,9 @@ function Services() {
   return (
     <>
       <section className=" bg-gradient-to-b from-[#02242e] to-dark lg:bg-[url('/assets/images/background_design_1.png')] lg:bg-cover relative top-12 lg:-top-22 z-0 bg-center ">
-        <div className="py-10 px-4 lg:pt-50 lg:px-0 lg:pl-24 flex flex-col gap-12">
+        <div className="py-10 px-4 lg:pt-50 lg:px-0 lg:pl-2 flex flex-col gap-12">
           {/*sub nav */}
           <div className="flex flex-col gap-8">
-            {/* <button onClick={() => selectServiceHandler("1")}>1</button>
-            <br />
-            <button onClick={() => selectServiceHandler("2")}>2</button>
-            <br />
-            <button onClick={() => selectServiceHandler("3")}>3</button>
-            <br />
-            <button onClick={() => selectServiceHandler("4")}>4</button>
-            <br />
-            <button onClick={() => selectServiceHandler("5")}>5</button>
-            <br />
-            <button onClick={() => selectServiceHandler("6")}>6</button>
-            <br />
-            <button onClick={() => selectServiceHandler("7")}>7</button>
-            <br />
-            <button onClick={() => selectServiceHandler("8")}>8</button>
-            <br />
-           */}
             <h1 className="text-center text-2xl font-black lg:text-5xl lg:font-bold ">
               SESRVICES
             </h1>
@@ -216,11 +199,164 @@ function Services() {
                 </p>
               </button>
             </div>
+            {/* Desktop sub nav */}
+            <div className="hidden  relative lg:flex items-center justify-between gap-2 ">
+              <button
+                onClick={() => selectServiceHandler("1")}
+                className="relative w-full min-h-[150px] z-10"
+              >
+                <p
+                  className={`absolute top-10 left-0 cursor-pointer min-w-46 text-[15px] ${
+                    service === "1" ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Datacenter Modernization
+                </p>
+                <div className="absolute top-1/2 left-[48%] size-4.5 flex items-center justify-center bg-amber-50 rounded-full cursor-pointer">
+                  <div
+                    className={`size-3 rounded-full ${
+                      service === "1" ? " bg-primary" : "bg-[#919190]"
+                    }`}
+                  ></div>
+                </div>
+              </button>
+              <button
+                onClick={() => selectServiceHandler("2")}
+                className="relative w-full min-h-[150px] z-10"
+              >
+                <p
+                  className={`absolute bottom-5 left-0 cursor-pointer text-[15px] ${
+                    service === "2" ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Migration Services
+                </p>
+                <div className="absolute top-1/2 left-[37%] size-4.5 flex items-center justify-center bg-amber-50 rounded-full cursor-pointer">
+                  <div
+                    className={`size-3 rounded-full ${
+                      service === "2" ? " bg-primary" : "bg-[#919190]"
+                    }`}
+                  ></div>
+                </div>
+              </button>
+              <button
+                onClick={() => selectServiceHandler("3")}
+                className="relative w-full min-h-[150px] z-10"
+              >
+                <p
+                  className={`absolute top-10 left-0 cursor-pointer text-[15px] ${
+                    service === "3" ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Network & Security
+                </p>
+                <div className="absolute top-1/2 left-[38%] size-4.5 flex items-center justify-center bg-amber-50 rounded-full cursor-pointer">
+                  <div
+                    className={`size-3 rounded-full ${
+                      service === "3" ? " bg-primary" : "bg-[#919190]"
+                    }`}
+                  ></div>
+                </div>
+              </button>
+              <button
+                onClick={() => selectServiceHandler("4")}
+                className="relative w-full min-h-[150px] z-10"
+              >
+                <p
+                  className={`absolute bottom-5 left-0 cursor-pointer min-w-42 text-[15px] ${
+                    service === "4" ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Database Management
+                </p>
+                <div className="absolute top-1/2 left-[43%] size-4.5 flex items-center justify-center bg-amber-50 rounded-full cursor-pointer">
+                  <div
+                    className={`size-3 rounded-full ${
+                      service === "4" ? " bg-primary" : "bg-[#919190]"
+                    }`}
+                  ></div>
+                </div>
+              </button>
+              <button
+                onClick={() => selectServiceHandler("5")}
+                className="relative w-full min-h-[150px] z-10"
+              >
+                <p
+                  className={`absolute top-5 left-0 cursor-pointer min-w-30 leading-5 text-[15px] ${
+                    service === "5" ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Private Multi-Cloud Services
+                </p>
+                <div className="absolute top-1/2 left-[44%] size-4.5 flex items-center justify-center bg-amber-50 rounded-full cursor-pointer">
+                  <div
+                    className={`size-3 rounded-full ${
+                      service === "5" ? " bg-primary" : "bg-[#919190]"
+                    }`}
+                  ></div>
+                </div>
+              </button>
+              <button
+                onClick={() => selectServiceHandler("6")}
+                className="relative w-full min-h-[150px] z-10"
+              >
+                <p
+                  className={`absolute bottom-5 left-0 cursor-pointer min-w-40 text-[15px] ${
+                    service === "6" ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Public Cloud services
+                </p>
+                <div className="absolute top-1/2 left-[43%] size-4.5 flex items-center justify-center bg-amber-50 rounded-full cursor-pointer">
+                  <div
+                    className={`size-3 rounded-full ${
+                      service === "6" ? " bg-primary" : "bg-[#919190]"
+                    }`}
+                  ></div>
+                </div>
+              </button>
+              <button
+                onClick={() => selectServiceHandler("7")}
+                className="relative w-full min-h-[150px] z-10"
+              >
+                <p
+                  className={`absolute top-5 left-0 cursor-pointer min-w-48 text-[15px] leading-5 ${
+                    service === "7" ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Business Continuity and Disaster Recovery (BCDR)
+                </p>
+                <div className="absolute top-1/2 left-[62%] size-4.5 flex items-center justify-center bg-amber-50 rounded-full cursor-pointer">
+                  <div
+                    className={`size-3 rounded-full ${
+                      service === "7" ? " bg-primary" : "bg-[#919190]"
+                    }`}
+                  ></div>
+                </div>
+              </button>
+              <button
+                onClick={() => selectServiceHandler("8")}
+                className="relative w-full min-h-[150px] z-10"
+              >
+                <p
+                  className={`absolute bottom-5 left-0 cursor-pointer min-w-35 text-[15px] ${
+                    service === "8" ? "text-primary" : "text-white"
+                  }`}
+                >
+                  Managed services
+                </p>
+                <div className="absolute top-1/2 left-1/3 size-4.5 flex items-center justify-center bg-amber-50 rounded-full cursor-pointer">
+                  <div
+                    className={`size-3 rounded-full ${
+                      service === "8" ? " bg-primary" : "bg-[#919190]"
+                    }`}
+                  ></div>
+                </div>
+              </button>
+              <div className="absolute top-[83px] left-20 h-[2px] w-[86%] bg-[#9c9e9d] z-0 "></div>
+            </div>
           </div>
-          {/* Desktop sub nav */}
-          <div className="hidden relative lg:grid lg:grid-cols-8 lg:grid-rows-2 gap-2">
-            
-          </div>
+          {/*services accordion */}
           <div>
             {/*Data Center Modernization */}
             {service === "1" && (
@@ -788,7 +924,6 @@ function Services() {
           </div>
         </div>
       </section>
-      
     </>
   );
 }

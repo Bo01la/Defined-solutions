@@ -90,7 +90,7 @@ function Nav() {
           <div>
             <ul className="flex justify-between items-center bg-white/30 py-4 px-6 rounded-4xl w-[433px]">
               <li
-                className="flex justifybetweend items-center gap-2"
+                className="flex justify-betweend items-center gap-2"
                 onClick={() => menuSelectHandler("home")}
               >
                 {isSelected === "home" ? (
@@ -106,7 +106,7 @@ function Nav() {
                 </Link>
               </li>
               <li
-                className="flex justifybetweend items-center gap-2"
+                className="flex justify-betweend items-center gap-2"
                 onClick={() => menuSelectHandler("services")}
               >
                 {isSelected === "services" ? (

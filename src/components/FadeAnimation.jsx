@@ -29,7 +29,7 @@ function FadeAnimation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 2.5 }}
+            transition={{ duration: 1.5 }}
             className="p-2 h-[200px] lg:h-[100px] flex justify-center items-center lg:px-40 text-center text-lg tracking-wide text-white/80"
           >
             {paragraphs[index]}
