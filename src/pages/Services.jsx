@@ -166,7 +166,7 @@ function Services() {
                 className="flex gap-2 items-center "
                 onClick={() => selectServiceHandler("7")}
               >
-                <div className="size-4.5 bg-amber-50 flex rounded-full items-center justify-center cursor-pointer">
+                <div className="size-4.5 min-w-[18px] bg-amber-50 flex rounded-full items-center justify-center cursor-pointer">
                   <div
                     className={`size-3 rounded-full ${
                       service === "7" ? " bg-primary" : "bg-[#919190]"
@@ -174,7 +174,7 @@ function Services() {
                   ></div>
                 </div>
                 <p
-                  className={`cursor-pointer tracking-wider text-[15px] ${
+                  className={`cursor-pointer tracking-wider text-[15px] leading-4 text-start ${
                     service === "7" ? " text-primary" : "text-white/80"
                   }`}
                 >
@@ -185,7 +185,7 @@ function Services() {
                 className="flex gap-2 items-center "
                 onClick={() => selectServiceHandler("8")}
               >
-                <div className="size-4.5 bg-amber-50 flex rounded-full items-center justify-center cursor-pointer">
+                <div className="size-4.5 bg-amber-50 flex rounded-full items-center justify-center cursor-pointer grow-0">
                   <div
                     className={`size-3 rounded-full ${
                       service === "8" ? " bg-primary" : "bg-[#919190]"
@@ -227,7 +227,7 @@ function Services() {
                 className="relative w-full min-h-[150px] z-10"
               >
                 <p
-                  className={`absolute bottom-5 left-0 cursor-pointer text-[15px] ${
+                  className={`absolute bottom-5 left-0 cursor-pointer text-[15px] min-w-48 text-start  ${
                     service === "2" ? "text-primary" : "text-white"
                   }`}
                 >
@@ -246,7 +246,7 @@ function Services() {
                 className="relative w-full min-h-[150px] z-10"
               >
                 <p
-                  className={`absolute top-10 left-0 cursor-pointer text-[15px] ${
+                  className={`absolute top-10 left-0 cursor-pointer text-[15px] min-w-48 text-start ${
                     service === "3" ? "text-primary" : "text-white"
                   }`}
                 >
@@ -355,7 +355,7 @@ function Services() {
                   ></div>
                 </div>
               </button>
-              <div className="absolute top-[83px] left-20 h-[2px] w-[86%] bg-[#9c9e9d] z-0 "></div>
+              <div className="absolute top-[83px] left-19 h-[2px] w-[86.5%] bg-[#9c9e9d] z-0 "></div>
             </div>
           </div>
           {/*services accordion */}

@@ -7,7 +7,7 @@ function SimpleServiceCard({ subTitle, subBody }) {
         <h4 className="lg:min-w-[360px] text-center lg:text-start text-1xl font-semibold">
           {subTitle}
         </h4>
-        <p className="text-center lg:text-start lg:min-w-[600px] lg:text-[15px]">
+        <p className="text-center lg:text-start lg:min-w-[calc(100vw-600px)] lg:text-[15px]">
           {subBody}
         </p>
       </div>

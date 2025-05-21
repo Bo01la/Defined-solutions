@@ -32,6 +32,7 @@ function Home() {
             </button>
           </div>
         </div>
+        {/* sub nav */}
         <div className="hidden lg:block my-20 px-26">
           <div className="relative">
             <div className="grid grid-cols-4 relative z-10">

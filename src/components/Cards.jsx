@@ -49,7 +49,7 @@ function Cards() {
   return (
     <div className="flex flex-col gap-6 relative z-50 ">
       {services.map((content) => (
-        <div className="mx-5 flex flex-col lg:flex-row justify-center lg:h-[86px] lg:justify-normal items-center gap-3 p-4 lg:px-8 lg:py-2 text-primary bg-white rounded-[48px] lg:rounded-full ">
+        <div key={content.key} className="mx-5 flex flex-col lg:flex-row justify-center lg:h-[86px] lg:justify-normal items-center gap-3 p-4 lg:px-8 lg:py-2 text-primary bg-white rounded-[48px] lg:rounded-full ">
           <h3 className="lg:min-w-[360px] text-center lg:text-start text-2xl font-black">
             {content.title}
           </h3>
@@ -58,7 +58,7 @@ function Cards() {
           </p>
           <Link
             to={`/services?service=${content.key}`}
-            className="relative lg:min-w-[260px] flex items-center justify-center gap-4 w-64 h-12 rounded-2xl bg-gradient-to-b from-primary to-secondary text-white font-black"
+            className="relative lg:min-w-[220px] flex items-center justify-center lg:justify-start lg:pl-9 gap-4 w-64 h-12 rounded-2xl bg-gradient-to-b from-primary to-secondary text-white font-black"
           >
             LEARN MORE
             <div className="absolute top-2 right-2 size-8 flex items-center justify-center rounded-full bg-amber-50">
