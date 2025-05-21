@@ -49,11 +49,11 @@ function Cards() {
   return (
     <div className="flex flex-col gap-6 relative z-50 ">
       {services.map((content) => (
-        <div key={content.key} className="mx-5 flex flex-col lg:flex-row justify-center lg:h-[86px] lg:justify-normal items-center gap-3 p-4 lg:px-8 lg:py-2 text-primary bg-white rounded-[48px] lg:rounded-full ">
-          <h3 className="lg:min-w-[360px] text-center lg:text-start text-2xl font-black">
+        <div key={content.key} className="mx-5 flex flex-col lg:flex-row justify-center lg:h-[86px] lg:justify-normal items-center gap-3 lg:gap-0 p-4 lg:px-8 lg:py-2 text-primary bg-white rounded-[48px] lg:rounded-full ">
+          <h3 className="lg:min-w-[300px] text-center lg:text-start text-2xl font-black">
             {content.title}
           </h3>
-          <p className="text-center lg:text-start lg:min-w-[600px] lg:text-[15px]">
+          <p className={`text-center lg:text-start lg:min-w-[600px] lg:leading-5 lg:text-[15px] ${content.title === "Managed Services" ? "lg:min-w-[600px] lg:w-[930px]": null}`}>
             {content.body}
           </p>
           <Link
