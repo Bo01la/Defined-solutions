@@ -51,7 +51,7 @@ function ContactUS() {
     <>
       {/* <section className=" bg-gradient-to-b from-[#02242e] to-dark lg:bg-[url('/assets/images/ELLIPSE-simple.png')] lg:bg-cover relative top-12 lg:-top-22 z-0 bg-center "> */}
       <section className="relative top-12 lg:-top-22 z-0  ">
-        <div className="absolute z-0 -top-[37rem] lg:top-0 bg-[url('/assets/images/ELLIPSE-simple.png')] bg-cover bg-center lg:bg-bottom h-[150vh] lg:h-[100vh] w-[100vw]"></div>
+        <div className="absolute z-0 -top-[37rem] lg:top-0 bg-[url('/assets/images/ELLIPSE-simple.png')] bg-cover bg-center lg:bg-bottom opacity-30 lg:opacity-100 h-[200vh] lg:h-[100vh] w-[100vw]"></div>
         <div className=" relative py-10 px-4 lg:pt-50 lg:px-0 lg:pl-24 grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 z-10">
           <div className="flex flex-col gap-6 lg:pt-10">
             {/* controls both form and title*/}
@@ -138,7 +138,7 @@ function ContactUS() {
           <a
             href="https://maps.app.goo.gl/4PAP7WgCNVoCsu198"
             target="blank"
-            className="bg-[url('/assets/images/location_image.png')] h-[calc(80vw-100px)] w-full lg:h-150 rounded-3xl lg:rounded-l-[50px] lg:rounded-r-none bg-cover lg:bg-cover lg:bg-center bg-no-repeat shadow-xl lg:shadow-none shadow-amber-50/20"
+            className="bg-[url('/assets/images/location_image.png')] h-[calc(80vw-100px)] w-full lg:h-150 rounded-4xl md:rounded-[3.5rem] lg:rounded-l-[50px] lg:rounded-r-none bg-cover lg:bg-cover lg:bg-center bg-no-repeat shadow-xl lg:shadow-none shadow-amber-50/20"
           ></a>
         </div>
       </section>
