@@ -2,7 +2,6 @@ import { useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import SimpleServiceCard from "../components/SimpleServiceCard";
 import ComplexServiceCard from "../components/ComplexServiceCard";
-import FadeInWrapper from "../components/FadeInWrapper";
 
 function Services() {
   const [searchParams] = useSearchParams();
@@ -39,7 +38,7 @@ function Services() {
   return (
     <>
       <section className="  relative top-12 lg:-top-22 z-0 bg-center ">
-        <div className="absolute z-0 -top-[37rem] lg:top-0 bg-[url('/assets/images/ELLIPSE-simple.png')] bg-cover bg-center lg:bg-bottom opacity-30 lg:opacity-100 h-[200vh] lg:h-[100vh] w-[100vw]"></div>
+        <div className="absolute z-0 -top-[37rem] lg:top-0 bg-[url('/assets/images/ELLIPSE-simple22.png')] bg-cover bg-center lg:bg-bottom opacity-30 lg:opacity-100 h-[200vh] lg:h-[100vh] w-[100vw]"></div>
 
         <div className="py-10 px-4 lg:pt-50 lg:px-0 lg:pl-2 flex flex-col gap-12 relative z-10">
           {/*sub nav */}
